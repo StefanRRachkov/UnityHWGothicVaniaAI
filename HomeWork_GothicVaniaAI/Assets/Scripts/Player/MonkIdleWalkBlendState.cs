@@ -12,15 +12,22 @@ public class MonkIdleWalkBlendState : StateMachineBehaviour {
 		movementController = animator.GetComponent<MovementController>();
 	}
 
-	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
+	{
 		DoMove(animator, movementController);
 
-		if (Input.GetKeyDown(attackKey)) {
+		if (Input.GetKeyDown(attackKey)) 
+		{
 			animator.SetTrigger("IsPunching");
 		}
-		if (Input.GetKeyDown(jumpKey)) {
+		if (Input.GetKeyDown(jumpKey)) 
+		{
 			animator.SetBool("IsJumping", true);
 			movementController.Jump();
+		}
+		if (Input.GetKeyDown(crouchKey))
+		{
+			animator.SetBool("IsCrouching", true);
 		}
 	}
 }

@@ -234,6 +234,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 839400518071424541, guid: dcf5d11945bc4664f8e16e57546f5a6a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 839400518071424542, guid: dcf5d11945bc4664f8e16e57546f5a6a,
         type: 3}
       propertyPath: m_Controller
@@ -386,6 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackKeyBinding: 101
   jumpKeyBinding: 119
+  crouchKeyBinding: 115
 --- !u!114 &840965919
 MonoBehaviour:
   m_ObjectHideFlags: 0
