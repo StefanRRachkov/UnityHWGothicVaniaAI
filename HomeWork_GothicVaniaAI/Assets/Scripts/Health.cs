@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using static UnityEngine.Mathf;
+using Random = UnityEngine.Random;
 
 public class Health : MonoBehaviour {
 
@@ -26,6 +28,17 @@ public class Health : MonoBehaviour {
 	}
 
 	public void TakeDamage() {
+		if (animator.GetBool("IsCrouching"))
+		{
+			float rand = Random.value;
+			if (rand <= 0.6)
+			{
+				Debug.Log("Dodged");
+				return;
+			}
+			Debug.Log("Couldn't dodge");
+		}
+		
 		int damage = 10;
 		health = Max(health - damage, 0);
 		animator.SetInteger("Health", health);
