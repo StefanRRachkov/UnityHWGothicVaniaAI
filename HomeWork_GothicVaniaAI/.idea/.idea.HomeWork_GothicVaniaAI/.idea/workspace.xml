@@ -12,16 +12,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchKickingState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIMoveToPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIAttackDeciderState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIWaitState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controlls.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AICrouchState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MonkJumpKickState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MonkIdleWalkBlendState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIAttackDeciderState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MonkPunchState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIWaitState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MonkJumpState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -30,8 +32,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MonkIdleWalkBlendState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchKickingState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/AIMoveToPlayerState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchState.cs" />
+        <option value="$PROJECT_DIR$/Assets/AICrouchState.cs" />
       </list>
     </option>
   </component>
@@ -83,7 +87,7 @@
       <updated>1586600423353</updated>
       <workItem from="1586600426727" duration="764000" />
       <workItem from="1586601720862" duration="4671000" />
-      <workItem from="1586692934050" duration="1195000" />
+      <workItem from="1586692934050" duration="4259000" />
     </task>
     <servers />
   </component>

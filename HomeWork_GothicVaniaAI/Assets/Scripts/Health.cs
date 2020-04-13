@@ -10,6 +10,7 @@ public class Health : MonoBehaviour {
 
 	private Animator animator;
 	public GameObject cross;
+	public bool bDodge = false;
 
 	void Start() {
 		animator = GetComponent<Animator>();
@@ -28,15 +29,12 @@ public class Health : MonoBehaviour {
 	}
 
 	public void TakeDamage() {
-		if (animator.GetBool("IsCrouching"))
+		// Add Dodging Mechanic
+		if (bDodge)
 		{
-			float rand = Random.value;
-			if (rand <= 0.6)
-			{
-				Debug.Log("Dodged");
-				return;
-			}
-			Debug.Log("Couldn't dodge");
+			Debug.Log("Dodged");
+			bDodge = false;
+			return;
 		}
 		
 		int damage = 10;

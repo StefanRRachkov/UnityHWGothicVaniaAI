@@ -6,6 +6,7 @@
     <e p="D:\Users\User\Documents\GitHub\UnityHWGothicVaniaAI\HomeWork_GothicVaniaAI" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AICrouchState.cs" t="Include" />
         <e p="Gothicvania Cemetery Artwork" t="Include">
           <e p="about.txt" t="Include" />
         </e>

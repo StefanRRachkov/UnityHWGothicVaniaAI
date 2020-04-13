@@ -1,22 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Controlls;
 
-public class MonkCrouchState : StateMachineBehaviour
+public class AICrouchState : StateMachineBehaviour
 {
-
-    private MovementController movementController;
     private float rand;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        movementController = animator.GetComponent<MovementController>();
         rand = Random.value;
-        if (rand <= .5f)
+        if (rand <= 0.5f)
         {
-            Debug.Log("animator.GetComponent<Health>().bDodge = true;");
+            Debug.Log("AI Dodge");
             animator.GetComponent<Health>().bDodge = true;
         }
     }
@@ -24,23 +20,20 @@ public class MonkCrouchState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Input.GetKeyDown(attackKey))
+        rand = Random.value;
+        if (rand <= 0.2f)
         {
-            animator.SetTrigger("IsCrouchKicking");
+            animator.SetTrigger("ShouldCrouchKick");
         }
-        if (Input.GetKeyUp(crouchKey))
+        else if (rand <= 0.4f)
         {
-            animator.SetBool("IsCrouching", false);
+            animator.SetBool("ShouldCrouch", false);
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("IsPunching");
-        animator.ResetTrigger("IsCrouchKicking");
-
         animator.GetComponent<Health>().bDodge = false;
-        Debug.Log("animator.GetComponent<Health>().bDodge = false;");
     }
 }

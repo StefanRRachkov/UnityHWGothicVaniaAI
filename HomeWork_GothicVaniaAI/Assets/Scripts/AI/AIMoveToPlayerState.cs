@@ -10,6 +10,8 @@ public class AIMoveToPlayerState : StateMachineBehaviour {
 	private Transform player;
 	private MovementController movementController;
 
+	private float rand;
+
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		GameObject playerGameObject = GameObject.FindWithTag("Player");
 		if (playerGameObject == null) {
@@ -28,8 +30,11 @@ public class AIMoveToPlayerState : StateMachineBehaviour {
 
 		if (distanceToPlayer > wantedDistanceToPlayer) {
 			movementController.SetHorizontalMoveDirection(Sign(vectorToPlayer.x));
-		} else {
-			animator.SetBool("ShouldPunch", true);
+		} else
+		{
+			rand = Random.value;
+			if(rand <= 0.6f) animator.SetBool("ShouldPunch", true);
+			else animator.SetBool("ShouldCrouch", true);
 		}
 	}
 }
