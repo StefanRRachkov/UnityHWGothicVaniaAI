@@ -47,13 +47,15 @@ public class AIMoveToPlayerState : StateMachineBehaviour {
 			// If its health is low it will more frequently decide to crouch
 			// if its health is higher it will punch more
 			
-			// The basic concept is - AI will have 5% chance to do something 
+			// The basic concept is - AI will have 20% chance to do something 
 			// random. The other 95% are going to be strictly evaluated with 
 			// Mathf.Sin function
 			
-			// The 5% chance for random choice
+			// The 20% chance for random choice
+			// this randomness is making a good balance between 
+			// high HP boss and our player
 			rand = Random.value;
-			if (rand <= 0.05f)
+			if (rand <= (health.GetMaxHP() / 1000.0f))
 			{
 				rand = Random.value;
 				if(rand <= 0.5f) animator.SetBool("ShouldPunch", true);
@@ -64,8 +66,10 @@ public class AIMoveToPlayerState : StateMachineBehaviour {
 				// (health.GetCurrentHP() / health.GetMaxHP()) * (Mathf.PI / 2)
 				// this function will give us
 				// float between 0 and 1 
-				dangerMeter = Mathf.Sin((health.GetCurrentHP() / health.GetMaxHP()) * (Mathf.PI / 2));
-				if(dangerMeter <= 0.5f) animator.SetBool("ShouldPunch", true);
+				// we use Sin 'cause it's not fixed value like 50% of the HP
+				dangerMeter = Mathf.Sin(((float)health.GetCurrentHP() / health.GetMaxHP()) * (Mathf.PI / 2));
+				Debug.Log(dangerMeter);
+				if(dangerMeter >= 0.5f) animator.SetBool("ShouldPunch", true);
 				else animator.SetBool("ShouldCrouch", true);
 			}
 		}

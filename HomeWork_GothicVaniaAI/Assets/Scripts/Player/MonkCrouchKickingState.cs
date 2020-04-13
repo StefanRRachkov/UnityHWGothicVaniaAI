@@ -8,7 +8,8 @@ public class MonkCrouchKickingState : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        // We are setting movement to 0 in the last 
+        // state, so we don't need to do it here
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
