@@ -7,18 +7,20 @@ public class MonkCrouchState : StateMachineBehaviour
 {
 
     private MovementController movementController;
-    private float rand;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         // When you are crouching you are dodging
+        
         // The only way for the AI to beat you in that moment
         // is by Jumping Kick cause with it you are going to be in Hurt state
         // where you can receive damage. 
+        // Exploit!!!
         
         movementController = animator.GetComponent<MovementController>();
         
+        // We stop any movements while crouching
         movementController.SetHorizontalMoveDirection(0);
         animator.GetComponent<Health>().bDodge = true;
     }
@@ -42,6 +44,8 @@ public class MonkCrouchState : StateMachineBehaviour
         animator.ResetTrigger("IsPunching");
         animator.ResetTrigger("IsCrouchKicking");
 
+        // You stop dodging as soon as you exit
+        // Crouch State
         animator.GetComponent<Health>().bDodge = false;
     }
 }
