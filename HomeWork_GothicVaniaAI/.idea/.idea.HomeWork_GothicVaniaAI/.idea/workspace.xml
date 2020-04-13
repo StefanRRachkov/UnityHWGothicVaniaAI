@@ -15,7 +15,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchKickingState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIMoveToPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIAttackDeciderState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIDeciderState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIDeciderState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIJumpKickState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/AIWaitState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
@@ -41,6 +41,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/AIMoveToPlayerState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/AICrouchState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/AIAttackDeciderState.cs" />
       </list>
     </option>
   </component>
@@ -98,6 +99,8 @@
       <workItem from="1586791354323" duration="89000" />
       <workItem from="1586791491405" duration="254000" />
       <workItem from="1586791768844" duration="304000" />
+      <workItem from="1586793832973" duration="10000" />
+      <workItem from="1586793860123" duration="71000" />
     </task>
     <servers />
   </component>
