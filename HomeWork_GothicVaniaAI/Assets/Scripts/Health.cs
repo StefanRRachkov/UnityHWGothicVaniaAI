@@ -6,14 +6,30 @@ using Random = UnityEngine.Random;
 public class Health : MonoBehaviour {
 
 	[SerializeField]
+	private int maxHealth = 100;
 	private int health = 100;
 
 	private Animator animator;
 	public GameObject cross;
+	
+	// Better name for this boolean should be
+	// immune, but for now we stay with dodge
 	public bool bDodge = false;
 
 	void Start() {
 		animator = GetComponent<Animator>();
+		animator.SetInteger("Health", maxHealth);
+		health = maxHealth;
+	}
+
+	public int GetMaxHP()
+	{
+		return this.maxHealth;
+	}
+
+	public int GetCurrentHP()
+	{
+		return this.health;
 	}
 
 	public void SpawnCross() {
@@ -29,11 +45,11 @@ public class Health : MonoBehaviour {
 	}
 
 	public void TakeDamage() {
-		// Add Dodging Mechanic
 		if (bDodge)
 		{
+			// We log which character is dodging at the moment
 			Debug.Log(animator.tag + " Dodged");
-			bDodge = false;
+			// and then we terminate TakeDamage() function
 			return;
 		}
 		

@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class AICrouchState : StateMachineBehaviour
 {
+    private MovementController movementController;
     private float rand;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        rand = Random.value;
-        if (rand <= 0.5f)
-        {
-            animator.GetComponent<Health>().bDodge = true;
-        }
+        movementController = animator.GetComponent<MovementController>();
+        
+        // AI stops any movement during crouching
+        movementController.SetHorizontalMoveDirection(0);
+        // as well it dodge our incoming damage
+        animator.GetComponent<Health>().bDodge = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -35,6 +37,8 @@ public class AICrouchState : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.ResetTrigger("ShouldCrouchKick");
+        
         animator.GetComponent<Health>().bDodge = false;
     }
 }
