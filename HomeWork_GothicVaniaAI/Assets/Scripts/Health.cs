@@ -32,7 +32,7 @@ public class Health : MonoBehaviour {
 		// Add Dodging Mechanic
 		if (bDodge)
 		{
-			Debug.Log("Dodged");
+			Debug.Log(animator.tag + " Dodged");
 			bDodge = false;
 			return;
 		}

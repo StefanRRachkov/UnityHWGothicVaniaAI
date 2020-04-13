@@ -12,7 +12,6 @@ public class AICrouchState : StateMachineBehaviour
         rand = Random.value;
         if (rand <= 0.5f)
         {
-            Debug.Log("AI Dodge");
             animator.GetComponent<Health>().bDodge = true;
         }
     }
@@ -20,6 +19,8 @@ public class AICrouchState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        // TODO: Logic under the Crouching dodge
+        
         rand = Random.value;
         if (rand <= 0.2f)
         {

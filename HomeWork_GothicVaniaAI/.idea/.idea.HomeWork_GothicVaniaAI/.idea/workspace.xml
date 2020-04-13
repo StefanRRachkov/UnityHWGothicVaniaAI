@@ -34,8 +34,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchKickingState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/AIMoveToPlayerState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchState.cs" />
         <option value="$PROJECT_DIR$/Assets/AICrouchState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/MonkCrouchState.cs" />
       </list>
     </option>
   </component>
@@ -87,7 +87,7 @@
       <updated>1586600423353</updated>
       <workItem from="1586600426727" duration="764000" />
       <workItem from="1586601720862" duration="4671000" />
-      <workItem from="1586692934050" duration="4259000" />
+      <workItem from="1586692934050" duration="6898000" />
     </task>
     <servers />
   </component>
